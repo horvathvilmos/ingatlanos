@@ -14,7 +14,7 @@
             color: #333;
         }
         header {
-            background-color: #0056b3;
+            background-color: #013b89;
             color: white;
             padding: 20px 10%;
             text-align: center;
@@ -31,7 +31,7 @@
             padding: 20px 10%;
         }
         .main-content h2 {
-            color: #0056b3;
+            color: #013b89;
         }
         .main-content p {
             font-size: 1.1em;
@@ -42,7 +42,7 @@
             text-align: center;
         }
         .cta button {
-            background-color: #0056b3;
+            background-color: #013b89;
             color: white;
             border: none;
             padding: 15px 30px;
@@ -51,84 +51,149 @@
             border-radius: 5px;
         }
         .cta button:hover {
-            background-color: #004494;
+            background-color: #012a60;
+        }
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #eef3f9;
+        }
+        .review-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+        }
+        .review-card h3 {
+            margin-top: 0;
+            color: #013b89;
+        }
+        .review-card p {
+            font-size: 0.9em;
+            line-height: 1.5;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
-        .interactive-form {
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            max-width: 600px;
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile img {
+            border-radius: 50%;
+            max-width: 150px;
+            border: 3px solid #013b89;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-form {
             margin: 20px auto;
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
         }
-        .interactive-form label {
+        .contact-form label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: bold;
         }
-        .interactive-form input,
-        .interactive-form textarea {
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
-        .interactive-form button {
-            background-color: #0056b3;
+        .contact-form button {
+            background-color: #013b89;
             color: white;
             border: none;
             padding: 10px 20px;
-            font-size: 1em;
             cursor: pointer;
             border-radius: 5px;
         }
-        .interactive-form button:hover {
-            background-color: #004494;
+        .contact-form button:hover {
+            background-color: #012a60;
         }
     </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7M7H9GQRDV');
+    </script>
 </head>
 <body>
     <header>
         <h1>Találjuk meg együtt a tökéletes megoldást!</h1>
         <p>Professzionális és barátságos ingatlanközvetítés az Ön igényeihez igazítva.</p>
     </header>
+    <div class="logo">
+        <img src="/mnt/data/leszopom magam.png" alt="HV Real Estate Logo">
+    </div>
     <main class="main-content">
+        <h2>Kapcsolatfelvétel</h2>
+        <div class="contact-form">
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email cím:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Üzenet:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Küldés</button>
+            </form>
+        </div>
         <h2>Miért válasszon engem?</h2>
         <p>
             Több éves tapasztalat, kiterjedt ügyfélhálózat és elkötelezett munka. Segítek Önnek gyorsan és kedvező feltételekkel
             értékesíteni vagy bérbe adni ingatlanját. Nem hiszem, hogy az "eladás" nyomulással működik – inkább abban hiszek,
             hogy a megfelelő partnerkapcsolatok és professzionális megoldások vezetnek sikerhez.
         </p>
-        <div class="cta">
-            <button onclick="document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'});">
-                Kérjen visszahívást!
-            </button>
+        <div class="profile">
+            <img src="/mnt/data/a703e9eb-aa81-4b88-a4a8-714a30b161cb.png" alt="Horváth Vilmos">
+            <h3>Horváth Vilmos</h3>
         </div>
-        <section id="contact-form" class="interactive-form">
-            <h2>Vegye fel velem a kapcsolatot</h2>
-            <form>
-                <label for="name">Név:</label>
-                <input type="text" id="name" name="name" placeholder="Írja ide a nevét" required>
-
-                <label for="email">Email cím:</label>
-                <input type="email" id="email" name="email" placeholder="Írja ide az email címét" required>
-
-                <label for="message">Üzenet:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Írja meg, miben segíthetek" required></textarea>
-
-                <button type="submit">Küldés</button>
-            </form>
-        </section>
+        <div class="reviews">
+            <div class="review-card">
+                <h3>N. Alice</h3>
+                <p>Nagyon meg vagyok elégedve Vilmos munkájával. Rendkívül kedves, szolgálatkész volt végig, annak ellenére, hogy sokat gondolkodtunk a lakás megvásárlásán...</p>
+            </div>
+            <div class="review-card">
+                <h3>S. Fodor</h3>
+                <p>Újra megbíznám a következő ingatlan értékesítésnél. Proaktív, felkészült, mosolygós...</p>
+            </div>
+            <div class="review-card">
+                <h3>G. Zoltán</h3>
+                <p>Az első ingatlan eladásomra került sor az életemben és örülök, hogy ezt Vilmos segítségével tudtam végig vinni...</p>
+            </div>
+            <div class="review-card">
+                <h3>G. Szalai</h3>
+                <p>Gyors, felkészült, precíz és rugalmas ha épp arra van szükség...</p>
+            </div>
+            <div class="review-card">
+                <h3>S. Gábor</h3>
+                <p>Nagyon gyors ügyintézésben részesültünk, megbízható rugalmas körültekintő és átlátható tájékoztatást kaptunk...</p>
+            </div>
+        </div>
     </main>
     <footer>
         <p>© 2024 Ingatlanközvetítés - Minden jog fenntartva.</p>
